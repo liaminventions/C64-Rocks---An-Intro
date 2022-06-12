@@ -1,0 +1,89 @@
+.label rok3=$7f91
+.label rok2=$7f71
+.label rok4=$7fb0
+.label rshow=$7fce
+.label endbit2=$930
+.label clearlastrow=$de0
+.label colorend=$81c7
+.label rstar1Done=$7f6b
+.label sine64=$9000
+.label rstar4done=$7fc4
+.label initStarfield=$7ffb
+.label colors=$816
+.label rhiOk=$8096
+.label colors1=$81c0
+.label sine128=$9200
+.label star=$d6d
+.label store=$8109
+.label rloop=$e2e {
+  .label end=$e6a
+}
+.label yLoop=$80d2
+.label ebutsprites=$b00
+.label do=$d00
+.label sinetable=$98e
+.label pad=$4000
+.label ronscreen=$8061
+.label rshow2=$7fdd
+.label scrolltextend=$86cc
+.label bigsine=$8708
+.label rclrChars=$d7b
+.label endbit=$91b
+.label color=$8106
+.label rstar3done=$7fa5
+.label starfieldCols=$86cc
+.label lineOffset=$8184
+.label irq1=$e6b {
+  .label end=$eb8
+}
+.label irq3=$ef5 {
+  .label end=$f2b
+}
+.label irq2=$eb9 {
+  .label end=$ef4
+}
+.label irq4=$f2c {
+  .label end=$fa5
+  .label irq5=$f4e
+}
+.label rtSine=$8100
+.label rsmc3=$8058
+.label bounce=$8808
+.label rsmc1=$8043
+.label rsmc2=$805c
+.label CreateStarScreen=$801c
+.label charpos=$205c
+.label updatePlasma=$809c
+.label colorRam=$5c00
+.label rclr=$8052
+.label rlp2=$807a
+.label copyimage=$fa6
+.label rlp1=$8073
+.label sineSpeeds=$813
+.label doStarfield=$7f40
+.label rlp=$801e
+.label scrolltext=$81c7
+.label scroller_update_char_row=$205e {
+  .label moveline=$2067
+  .label noscroll=$20af {
+  }
+}
+.label xLoop=$80f4
+.label starfieldRow=$86e0
+.label addSpeed=$815
+.label rlow=$802f
+.label initPlasma=$936
+.label rstar2Done=$7f85
+.label rsmcx=$8096
+.label sine1=$80da
+.label code=$826
+.label sine0=$80d7
+.label copy_inverted_system_font=$202e {
+  .label loop=$2045
+}
+.label rok=$7f57
+.label framecount=$205b
+.label colorOffsets=$815c
+.label sineOffsets=$8134
+.label wopee=$951
+.label rcol=$8086
