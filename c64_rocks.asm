@@ -684,7 +684,7 @@ scrolltext:
     .text " code  - waverider     but also some code 'borrowed' from various sources"
     .text "    (don't worry, i understand the code that i take and i edit them *very* thoroughly.        "
     .text " gfx   - lol i just took stock images of a monitor and c64 and pasted them together, and then used gimp 2.10.30 to edit them together"  //   (of course now they are gone...)     "
-    .text " tools - ca65 and kick assembler/sublime text for programming,  project one, gimp, microsoft paint, and scratch.mit.edu for gfx, and spritemate.com for sprite graphix           "
+    .text "           tools - ca65 and kick assembler/sublime text for programming,  project one, gimp, microsoft paint, and scratch.mit.edu for gfx, and spritemate.com for sprite graphix           "
     .text " the movement of 'rocks' is created using an fds wavetable instrument in famitracker, saved the instrument, then i used hexed.it to remove the header for the .fti file.       how peculiar...         "
     .text "           ***restarting scroller***          "
 scrolltextend:

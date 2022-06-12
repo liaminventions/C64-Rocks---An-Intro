@@ -1,5 +1,4 @@
 Output dir: C:\c64\Source\c64 rocks\bin
-User Arguments: afo=true
 parsing
 flex pass 1
 flex pass 2
@@ -12,7 +11,7 @@ Default-segment:
   $0801-$080c Unnamed
   $0810-$0a8d Unnamed
   $0b00-$0fb4 Sprites
-  $1000-$288e Music
+  $1000-$2898 Music
   $4c00-$4fe7 Unnamed
   $5c00-$5fe7 Unnamed
   $6000-$7f3f Unnamed

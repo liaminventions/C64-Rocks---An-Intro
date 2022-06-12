@@ -1,0 +1,169 @@
+Opening monitor command playback file: C:\c64\Source\c64 rocks/bin/c64_rocks.vs
+ 
+*** VICE Version 3.6.0 ***
+ 
+Welcome to x64sc, the free portable C64 Emulator.
+ 
+Current VICE team members:
+Martin Pottendorfer, Marco van den Heuvel, Fabrizio Gennari, Groepaz, 
+Errol Smith, Ingo Korb, Olaf Seibert, Marcus Sutton, Kajtar Zsolt, AreaScout, 
+Bas Wassink, Michael C. Martin, Christopher Phillips, David Hogan, 
+Empathic Qubit, Roberto Muscedere, June Tate-Gans, Pablo Roldan.
+ 
+This is free software with ABSOLUTELY NO WARRANTY.
+See the "About VICE" command for more info.
+ 
+random seed was: 0x62a67db2
+command line was: x64sc -logfile C:\c64\Source\c64 rocks/bin/c64_rocks_ViceLog.txt -moncommands C:\c64\Source\c64 rocks/bin/c64_rocks.vs C:\c64\Source\c64 rocks/bin/c64_rocks.prg
+Loading system file `C:\C64\Tools\Vice\bin\..\C64\kernal'.
+Loading system file `C:\C64\Tools\Vice\bin\..\C64\basic'.
+Loading system file `C:\C64\Tools\Vice\bin\..\C64\chargen'.
+Loading system file `C:\C64\Tools\Vice\bin\..\PRINTER\mps803'.
+Palette: Loading palette `C:\C64\Tools\Vice\bin\..\PRINTER\mps803.vpl'.
+Loading system file `C:\C64\Tools\Vice\bin\..\PRINTER\nl10-cbm'.
+Palette: Loading palette `C:\C64\Tools\Vice\bin\..\PRINTER\nl10.vpl'.
+NL10: Printer driver initialized.
+Palette: Loading palette `C:\C64\Tools\Vice\bin\..\PRINTER\1520.vpl'.
+Loading system file `C:\C64\Tools\Vice\bin\..\DRIVES\dos1540'.
+Loading system file `C:\C64\Tools\Vice\bin\..\DRIVES\dos1541'.
+Loading system file `C:\C64\Tools\Vice\bin\..\DRIVES\d1541II'.
+Loading system file `C:\C64\Tools\Vice\bin\..\DRIVES\dos1570'.
+Loading system file `C:\C64\Tools\Vice\bin\..\DRIVES\dos1571'.
+Loading system file `C:\C64\Tools\Vice\bin\..\DRIVES\dos1581'.
+DriveROM: Error - 2000 ROM image not found. Hardware-level 2000 emulation is not available.
+DriveROM: Error - 4000 ROM image not found. Hardware-level 4000 emulation is not available.
+DriveROM: Error - CMDHD ROM image not found. Hardware-level CMDHD emulation is not available.
+Loading system file `C:\C64\Tools\Vice\bin\..\DRIVES\dos2031'.
+Loading system file `C:\C64\Tools\Vice\bin\..\DRIVES\dos2040'.
+Loading system file `C:\C64\Tools\Vice\bin\..\DRIVES\dos3040'.
+Loading system file `C:\C64\Tools\Vice\bin\..\DRIVES\dos4040'.
+Loading system file `C:\C64\Tools\Vice\bin\..\DRIVES\dos1001'.
+Loading system file `C:\C64\Tools\Vice\bin\..\DRIVES\dos9000'.
+Drive: Finished loading ROM images.
+VIC-II: Initializing chip model "MOS8565" (63 cycles per line, 312 raster lines).
+using GTK3 backend: DirectX
+Created render thread 0
+Render thread initialised
+Sound: Available sound devices: dx wmm dummy fs dump wav voc iff aiff mp3 flac ogg soundmovie
+Keyboard: Loading keymap `C:\C64\Tools\Vice\bin\..\C64\gtk3_sym.vkm'.
+AUTOSTART: Autodetecting image type of `C:\c64\Source\c64 rocks/bin/c64_rocks.prg'.
+Filesystem Image Probe: Error - Import GCR: Unknown GCR image version 48.
+Filesystem Image: Unknown disk image `C:\c64\Source\c64 rocks/bin/c64_rocks.prg'.
+Tape: Error - Cannot open file `C:\c64\Source\c64 rocks/bin/c64_rocks.prg'
+Error - CRT header invalid.
+CART: 'C:\c64\Source\c64 rocks/bin/c64_rocks.prg' is not a valid CRT file.
+AUTOSTART: Loading PRG file `C:\c64\Source\c64 rocks/bin/c64_rocks.prg' with direct RAM injection.
+AUTOSTART: Resetting the machine to autostart '*'
+VIC-II: VSP Bug: safe channels are: 135. Emulation of memory corruption is disabled.
+AUTOSTART: `C:\c64\Source\c64 rocks/bin/c64_rocks.prg' recognized as program/p00 file.
+Main CPU: starting at ($FFFC).
+Main CPU: RESET.
+Increasing trap_func array size to 1 with 1 to run
+Monitor playback command: al C:2610 .rsmc3
+Unit 8: RESET.
+Monitor playback command: al C:205e .scroller_update_char_row
+Monitor playback command: al C:26ac .xLoop
+Monitor playback command: al C:2879 .bounce
+Monitor playback command: al C:25fb .rsmc1
+Monitor playback command: al C:2614 .rsmc2
+Monitor playback command: al C:2751 .starfieldRow
+Monitor playback command: al C:d00 .do
+Monitor playback command: al C:815 .addSpeed
+Monitor playback command: al C:2549 .rok3
+Monitor playback command: al C:98e .sinetable
+Monitor playback command: al C:2529 .rok2
+Monitor playback command: al C:2619 .ronscreen
+Monitor playback command: al C:2568 .rok4
+Monitor playback command: al C:2586 .rshow
+Monitor playback command: al C:206c .moveline
+Monitor playback command: al C:2045 .loop
+Monitor playback command: al C:25e7 .rlow
+Monitor playback command: al C:930 .endbit2
+Monitor playback command: al C:dd3 .clearlastrow
+Monitor playback command: al C:20c7 .colorend
+Monitor playback command: al C:2523 .rstar1Done
+Monitor playback command: al C:936 .initPlasma
+Monitor playback command: al C:25d4 .CreateStarScreen
+Monitor playback command: al C:2595 .rshow2
+Monitor playback command: al C:253d .rstar2Done
+Monitor playback command: al C:9000 .sine64
+Monitor playback command: al C:205c .charpos
+Monitor playback command: al C:20b4 .noscroll
+Monitor playback command: al C:2654 .updatePlasma
+Monitor playback command: al C:24f8 .scrolltextend
+Monitor playback command: al C:257c .rstar4done
+Monitor playback command: al C:264e .rsmcx
+Monitor playback command: al C:2779 .bigsine
+Monitor playback command: al C:d7b .rclrChars
+Monitor playback command: al C:5c00 .colorRam
+Monitor playback command: al C:2692 .sine1
+Monitor playback command: al C:260a .rclr
+Monitor playback command: al C:826 .code
+Monitor playback command: al C:91b .endbit
+Monitor playback command: al C:26be .color
+Monitor playback command: al C:268f .sine0
+Monitor playback command: al C:80b .upstartEnd
+Monitor playback command: al C:2632 .rlp2
+Monitor playback command: al C:202e .copy_inverted_system_font
+Monitor playback command: al C:25b3 .initStarfield
+Monitor playback command: al C:255d .rstar3done
+Monitor playback command: al C:816 .colors
+Monitor playback command: al C:f97 .copyimage
+Monitor playback command: al C:262b .rlp1
+Monitor playback command: al C:250f .rok
+Monitor playback command: al C:205b .framecount
+Monitor playback command: al C:813 .sineSpeeds
+Monitor playback command: al C:264e .rhiOk
+Monitor playback command: al C:20c0 .colors1
+Monitor playback command: al C:e5c .end__0
+Monitor playback command: al C:eaa .end__1
+Monitor playback command: al C:ee6 .end__2
+Monitor playback command: al C:f1d .end__3
+Monitor playback command: al C:f96 .end__4
+Monitor playback command: al C:9200 .sine128
+Monitor playback command: al C:273d .starfieldCols
+Monitor playback command: al C:d6d .star
+Monitor playback command: al C:24f8 .doStarfield
+Monitor playback command: al C:2714 .colorOffsets
+Monitor playback command: al C:273c .lineOffset
+Monitor playback command: al C:26c1 .store
+Monitor playback command: al C:268a .yLoop
+Monitor playback command: al C:26ec .sineOffsets
+Monitor playback command: al C:e1d .infloop
+Monitor playback command: al C:25d6 .rlp
+Monitor playback command: al C:b00 .ebutsprites
+Monitor playback command: al C:e5d .irq1
+Monitor playback command: al C:951 .wopee
+Monitor playback command: al C:e20 .irq0
+Monitor playback command: al C:ee7 .irq3
+Monitor playback command: al C:eab .irq2
+Monitor playback command: al C:20c7 .scrolltext
+Monitor playback command: al C:263e .rcol
+Monitor playback command: al C:f40 .irq5
+Monitor playback command: al C:f1e .irq4
+Monitor playback command: al C:26b8 .rtSine
+Closed monitor command playback file: C:\c64\Source\c64 rocks/bin/c64_rocks.vs
+Sound: Opened device `dx', speed 48000Hz, fragment size 2.67ms, buffer size 32.00ms
+reSID: MOS8580, filter on, sampling rate 48000Hz - resampling, pass to 21600Hz
+Sync reset
+Initiating render thread 0 shutdown
+Joining render thread 0 ...
+Joined render thread 0.
+
+Resources with non default values:
+LogFileName="C:\c64\Source\c64 rocks/bin/c64_rocks_ViceLog.txt"
+Window0Height=663
+Window0Width=720
+Window0Xpos=573
+Window0Ypos=305
+AutostartWarp=0
+AutostartPrgMode=1
+
+reconstructed commandline options (might be incomplete):
+-default +autostart-warp -autostartprgmode 1
+
+VICE thread initiating shutdown
+VICE thread is exiting
+VICE thread has been joined.
+VIC-II: VSP Bug: safe channels are: 1567. Emulation of memory corruption is disabled.
+Sound: Closing device `dx'
