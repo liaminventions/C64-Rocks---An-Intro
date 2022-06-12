@@ -364,13 +364,6 @@ rclrChars:
 
         jsr copyimage
 
-        ldy #$00
-        lda #$55
-!loop:
-        sta $d800,x
-        iny
-        bne !loop-
-
         lda #0
         ldx #0
 !:
@@ -382,10 +375,9 @@ rclrChars:
         lda #0
         ldx #$40
 !:      sta $d800 + 40*23,x
-        sta colorRam + 40*23,x
-        dex;bne !-
+        dex
+        bne !-
     
-
         lda #0
         sta charpos
         sta charpos+1
@@ -406,29 +398,30 @@ clearlastrow:
         lda #BLACK
         sta $d800+24*40, x
         lda #' '
-        sta ($4c00)+24*40, x
-        sta ($4c00)+23*40, x
+        sta ($4400)+24*40, x
+        sta ($4400)+23*40, x
         inx
         cpx #40
         bne clearlastrow
 
             // IRQ setup
-    sei
-    lda #$35        // Bank out kernal and basic
-    sta $01
-    // Setup raster IRQ
-    SetupIRQ(rloop, 16, false)
+        sei
+        lda #$35        // Bank out kernal and basic
+        sta $01
+        // Setup raster IRQ
+        SetupIRQ(irq0, 16, false)
 
-    lda #0
-    sta framecount
-
-    cli
+        lda #0
+        sta framecount
 
         cli
 
-        jmp *
+{
+infloop:
+        jmp infloop
+}
 
-rloop: {
+irq0: {
         irq_start(end)
 
         lda #0
@@ -438,10 +431,10 @@ rloop: {
 
         lda #$3b
         sta $d011
-        lda #$38
-        sta $d018
         lda #$d8
         sta $d016
+        lda #$38
+        sta $d018
 
         jsr scroller_update_char_row    // update the scroller text
 
@@ -451,7 +444,8 @@ end:    rti
 
 irq1: {
         irq_start(end)
-        sec;sec                     //delay 28 cycles
+        sec
+        sec                     //delay 28 cycles
         lda #$0a //hides 'ASL A'
         bpl *-1
 
@@ -516,7 +510,7 @@ irq3: {
         eor #7 // xor bits 0-2 and leave bit 3 zero for 38 column mode
         sta $d016
 
-        lda #$30 // bank + $0400
+        lda #$10 // bank + $0400
         sta $d018
 
         DebugRaster(0)
@@ -529,7 +523,7 @@ irq4: {
 
         double_irq(end, irq5)
 irq5:
-        txs
+
 
     // Wait exactly 9 * (2+3) cycles so that the raster line is in the border
     ldx #$09
@@ -559,10 +553,9 @@ irq5:
     lda #0
     sta $d021
 
-        irq_end(rloop, 16)
+        irq_end(irq0, 16)
 end:    rti
 }
-
 
         // some c code (he a)
 copyimage:
@@ -581,7 +574,7 @@ copyimage:
 
 
 // VIC-II BANK 1
-.const VIC_BASE = $4800
+.const VIC_BASE = $4000
 
 // Copy ROM font from $D000 ROM to $4000
 // Code adapted from: https://dustlayer.com/vic-ii/2013/4/23/vic-ii-for-beginners-part-2-to-have-or-to-not-have-character
@@ -621,6 +614,11 @@ charpos:    .byte 0, 0
 
 //----------------------------------------------------------
 scroller_update_char_row: {
+    pha
+    txa
+    pha
+    tya
+    pha
     DebugRaster(GREEN)
     lda framecount
     and #7
@@ -659,15 +657,37 @@ moveline:
     sta charpos+1
 noscroll:
     DebugRaster(0)
+    pla 
+    tay
+    pla
+    tax
+    pla
     rts
 }
 
- *=$4000 "reserve VIC memory - don't let this overlap any other segment" virtual
-pad: .fill $1000,0
-*=$4c00;            .fill picture.getScreenRamSize(), picture.getScreenRam(i)
-*=$5c00; colorRam:  .fill picture.getColorRamSize(), picture.getColorRam(i)
-*=$6000;            .fill picture.getBitmapSize(), picture.getBitmap(i)
+.align 64
+colors1:
+                .text "abmnmaj"
+colorend:
 
+scrolltext:
+    .text "  guess what? this is my first program i ever wrote for the commodore 64...         1090 lines of code!      --in 5 days--        "
+    .text "        pretty impressive, eh?"
+    .text "                   wave on da keyz here"
+    .text "          xd           "
+    //.text "brace yourselves for a glitch..            this program will self destruct in --42.3845 seconds--"
+    .text "                   credits time ig?"
+    .text "                   "
+    .text " music - 'and i say hey no no hey no' by linus"
+    .text "                   "
+    //.text " bruh        more glitches                                                         "
+    .text " code  - waverider     but also some code 'borrowed' from various sources"
+    .text "    (don't worry, i understand the code that i take and i edit them *very* thoroughly.        "
+    .text " gfx   - lol i just took stock images of a monitor and c64 and pasted them together, and then used gimp 2.10.30 to edit them together"  //   (of course now they are gone...)     "
+    .text " tools - ca65 and kick assembler/sublime text for programming,  project one, gimp, microsoft paint, and scratch.mit.edu for gfx, and spritemate.com for sprite graphix           "
+    .text " the movement of 'rocks' is created using an fds wavetable instrument in famitracker, saved the instrument, then i used hexed.it to remove the header for the .fti file.       how peculiar...         "
+    .text "           ***restarting scroller***          "
+scrolltextend:
 
 // [Do Starfield] --------------------------------------------------------------
 
@@ -1030,29 +1050,6 @@ colorOffsets:
 lineOffset:     
         .by 0
 
-.align 64
-colors1:
-                .text "abmnmaj"
-colorend:
-
-scrolltext:
-    .text "  guess what? this is my first program i ever wrote for the commodore 64...         1071 lines of code!      --in 5 days--        "
-    .text "        pretty impressive, eh?"
-    .text "                   wave on da keyz here"
-    .text "          xd           "
-    .text "brace yourselves for a glitch..            this program will self destruct in --42.3845 seconds--"
-    .text "                   credits time ig?"
-    .text "                   "
-    .text " music - 'and i say hey no no hey no' by linus"
-    .text "                   "
-    .text " bruh        more glitches                                                          code  - waverider     but also some code 'borrowed' from various sources"
-    .text "    (don't worry, i understand the code that i take and i edit them *very* thoroughly.        "
-    .text " gfx   - lol i just took stock images of a monitor and c64 and pasted them together, and then used gimp 2.10.30 to edit them together     (of course now they are gone...)     "
-    .text " tools - ca65 and kick assembler/sublime text for programming,  project one, gimp, microsoft paint, and scratch.mit.edu for gfx, and spritemate.com for sprite graphix           "
-    .text " the movement of 'rocks' is created using an fds wavetable instrument in famitracker, saved the instrument, then i used hexed.it to remove the header for the .fti file.       how peculiar...         "
-    .text "           ***restarting scroller***          "
-scrolltextend:
-
 // [DATA] ----------------------------------------------------------------------
 
 // Dark starfield so it doesnt distract from bullets and text
@@ -1087,3 +1084,7 @@ bigsine:
   .byte $15,$16,$16,$17,$18,$19,$19,$1a,$1b,$1c,$1d,$1d,$1e,$1f,$20,$20
 
 bounce: .fill bounced.getSize(), bounced.get(i)
+
+*=$4c00;            .fill picture.getScreenRamSize(), picture.getScreenRam(i)
+*=$5c00; colorRam:  .fill picture.getColorRamSize(), picture.getColorRam(i)
+*=$6000;            .fill picture.getBitmapSize(), picture.getBitmap(i)

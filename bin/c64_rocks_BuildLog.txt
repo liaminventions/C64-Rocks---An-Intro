@@ -10,12 +10,11 @@ Memory Map
 Default-segment:
   $0801-$080c Unnamed
   $0810-$0a8d Unnamed
-  $0b00-$0fc3 Sprites
-  $1000-$20af Music
-  *$4000-$4fff reserve VIC memory - don't let this overlap any other segment
+  $0b00-$0fb4 Sprites
+  $1000-$288e Music
   $4c00-$4fe7 Unnamed
   $5c00-$5fe7 Unnamed
-  $6000-$8827 Unnamed
+  $6000-$7f3f Unnamed
   $9000-$93ff Unnamed
 
 Writing Vice symbol file: C:\c64\Source\c64 rocks\bin\c64_rocks.vs

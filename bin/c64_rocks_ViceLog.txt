@@ -13,7 +13,7 @@ Empathic Qubit, Roberto Muscedere, June Tate-Gans, Pablo Roldan.
 This is free software with ABSOLUTELY NO WARRANTY.
 See the "About VICE" command for more info.
  
-random seed was: 0x62a5f244
+random seed was: 0x62a6130e
 command line was: x64sc -logfile C:\c64\Source\c64 rocks/bin/c64_rocks_ViceLog.txt -moncommands C:\c64\Source\c64 rocks/bin/c64_rocks.vs C:\c64\Source\c64 rocks/bin/c64_rocks.prg
 Loading system file `C:\C64\Tools\Vice\bin\..\C64\kernal'.
 Loading system file `C:\C64\Tools\Vice\bin\..\C64\basic'.
@@ -54,94 +54,94 @@ Error - CRT header invalid.
 CART: 'C:\c64\Source\c64 rocks/bin/c64_rocks.prg' is not a valid CRT file.
 AUTOSTART: Loading PRG file `C:\c64\Source\c64 rocks/bin/c64_rocks.prg' with direct RAM injection.
 AUTOSTART: Resetting the machine to autostart '*'
-VIC-II: VSP Bug: safe channels are: 456. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 23456. Emulation of memory corruption is disabled.
 AUTOSTART: `C:\c64\Source\c64 rocks/bin/c64_rocks.prg' recognized as program/p00 file.
 Main CPU: starting at ($FFFC).
 Main CPU: RESET.
 Increasing trap_func array size to 1 with 1 to run
-Monitor playback command: al C:8058 .rsmc3
+Monitor playback command: al C:2606 .rsmc3
 Unit 8: RESET.
 Monitor playback command: al C:205e .scroller_update_char_row
-Monitor playback command: al C:80f4 .xLoop
-Monitor playback command: al C:8808 .bounce
-Monitor playback command: al C:8043 .rsmc1
-Monitor playback command: al C:805c .rsmc2
-Monitor playback command: al C:86e0 .starfieldRow
+Monitor playback command: al C:26a2 .xLoop
+Monitor playback command: al C:286f .bounce
+Monitor playback command: al C:25f1 .rsmc1
+Monitor playback command: al C:260a .rsmc2
+Monitor playback command: al C:2747 .starfieldRow
 Monitor playback command: al C:d00 .do
 Monitor playback command: al C:815 .addSpeed
-Monitor playback command: al C:7f91 .rok3
+Monitor playback command: al C:253f .rok3
 Monitor playback command: al C:98e .sinetable
-Monitor playback command: al C:7f71 .rok2
-Monitor playback command: al C:4000 .pad
-Monitor playback command: al C:8061 .ronscreen
-Monitor playback command: al C:7fb0 .rok4
-Monitor playback command: al C:7fce .rshow
-Monitor playback command: al C:2067 .moveline
+Monitor playback command: al C:251f .rok2
+Monitor playback command: al C:260f .ronscreen
+Monitor playback command: al C:255e .rok4
+Monitor playback command: al C:257c .rshow
+Monitor playback command: al C:206c .moveline
 Monitor playback command: al C:2045 .loop
-Monitor playback command: al C:802f .rlow
+Monitor playback command: al C:25dd .rlow
 Monitor playback command: al C:930 .endbit2
-Monitor playback command: al C:de0 .clearlastrow
-Monitor playback command: al C:81c7 .colorend
-Monitor playback command: al C:7f6b .rstar1Done
+Monitor playback command: al C:dd3 .clearlastrow
+Monitor playback command: al C:20c7 .colorend
+Monitor playback command: al C:2519 .rstar1Done
 Monitor playback command: al C:936 .initPlasma
-Monitor playback command: al C:801c .CreateStarScreen
-Monitor playback command: al C:7fdd .rshow2
-Monitor playback command: al C:7f85 .rstar2Done
+Monitor playback command: al C:25ca .CreateStarScreen
+Monitor playback command: al C:258b .rshow2
+Monitor playback command: al C:2533 .rstar2Done
 Monitor playback command: al C:9000 .sine64
 Monitor playback command: al C:205c .charpos
-Monitor playback command: al C:20af .noscroll
-Monitor playback command: al C:809c .updatePlasma
-Monitor playback command: al C:86cc .scrolltextend
-Monitor playback command: al C:7fc4 .rstar4done
-Monitor playback command: al C:8096 .rsmcx
-Monitor playback command: al C:8708 .bigsine
+Monitor playback command: al C:20b4 .noscroll
+Monitor playback command: al C:264a .updatePlasma
+Monitor playback command: al C:24ee .scrolltextend
+Monitor playback command: al C:2572 .rstar4done
+Monitor playback command: al C:2644 .rsmcx
+Monitor playback command: al C:276f .bigsine
 Monitor playback command: al C:d7b .rclrChars
 Monitor playback command: al C:5c00 .colorRam
-Monitor playback command: al C:80da .sine1
-Monitor playback command: al C:8052 .rclr
+Monitor playback command: al C:2688 .sine1
+Monitor playback command: al C:2600 .rclr
 Monitor playback command: al C:826 .code
 Monitor playback command: al C:91b .endbit
-Monitor playback command: al C:8106 .color
-Monitor playback command: al C:80d7 .sine0
+Monitor playback command: al C:26b4 .color
+Monitor playback command: al C:2685 .sine0
 Monitor playback command: al C:80b .upstartEnd
-Monitor playback command: al C:807a .rlp2
+Monitor playback command: al C:2628 .rlp2
 Monitor playback command: al C:202e .copy_inverted_system_font
-Monitor playback command: al C:7ffb .initStarfield
-Monitor playback command: al C:7fa5 .rstar3done
+Monitor playback command: al C:25a9 .initStarfield
+Monitor playback command: al C:2553 .rstar3done
 Monitor playback command: al C:816 .colors
-Monitor playback command: al C:fa6 .copyimage
-Monitor playback command: al C:8073 .rlp1
-Monitor playback command: al C:7f57 .rok
+Monitor playback command: al C:f97 .copyimage
+Monitor playback command: al C:2621 .rlp1
+Monitor playback command: al C:2505 .rok
 Monitor playback command: al C:205b .framecount
 Monitor playback command: al C:813 .sineSpeeds
-Monitor playback command: al C:8096 .rhiOk
-Monitor playback command: al C:81c0 .colors1
-Monitor playback command: al C:e6a .end__0
-Monitor playback command: al C:eb8 .end__1
-Monitor playback command: al C:ef4 .end__2
-Monitor playback command: al C:f2b .end__3
-Monitor playback command: al C:fa5 .end__4
+Monitor playback command: al C:2644 .rhiOk
+Monitor playback command: al C:20c0 .colors1
+Monitor playback command: al C:e5c .end__0
+Monitor playback command: al C:eaa .end__1
+Monitor playback command: al C:ee6 .end__2
+Monitor playback command: al C:f1d .end__3
+Monitor playback command: al C:f96 .end__4
 Monitor playback command: al C:9200 .sine128
-Monitor playback command: al C:86cc .starfieldCols
+Monitor playback command: al C:2733 .starfieldCols
 Monitor playback command: al C:d6d .star
-Monitor playback command: al C:7f40 .doStarfield
-Monitor playback command: al C:815c .colorOffsets
-Monitor playback command: al C:8184 .lineOffset
-Monitor playback command: al C:8109 .store
-Monitor playback command: al C:e2e .rloop
-Monitor playback command: al C:80d2 .yLoop
-Monitor playback command: al C:8134 .sineOffsets
-Monitor playback command: al C:801e .rlp
+Monitor playback command: al C:24ee .doStarfield
+Monitor playback command: al C:270a .colorOffsets
+Monitor playback command: al C:2732 .lineOffset
+Monitor playback command: al C:26b7 .store
+Monitor playback command: al C:2680 .yLoop
+Monitor playback command: al C:26e2 .sineOffsets
+Monitor playback command: al C:e1d .infloop
+Monitor playback command: al C:25cc .rlp
 Monitor playback command: al C:b00 .ebutsprites
-Monitor playback command: al C:e6b .irq1
+Monitor playback command: al C:e5d .irq1
 Monitor playback command: al C:951 .wopee
-Monitor playback command: al C:ef5 .irq3
-Monitor playback command: al C:eb9 .irq2
-Monitor playback command: al C:8086 .rcol
-Monitor playback command: al C:81c7 .scrolltext
-Monitor playback command: al C:f4e .irq5
-Monitor playback command: al C:f2c .irq4
-Monitor playback command: al C:8100 .rtSine
+Monitor playback command: al C:e20 .irq0
+Monitor playback command: al C:ee7 .irq3
+Monitor playback command: al C:eab .irq2
+Monitor playback command: al C:20c7 .scrolltext
+Monitor playback command: al C:2634 .rcol
+Monitor playback command: al C:f40 .irq5
+Monitor playback command: al C:f1e .irq4
+Monitor playback command: al C:26ae .rtSine
 Closed monitor command playback file: C:\c64\Source\c64 rocks/bin/c64_rocks.vs
 Sound: Opened device `dx', speed 48000Hz, fragment size 2.67ms, buffer size 32.00ms
 reSID: MOS8580, filter on, sampling rate 48000Hz - resampling, pass to 21600Hz
@@ -153,8 +153,6 @@ AUTOSTART: Restoring FileSystemDevice8 to 1.
 AUTOSTART: Restoring FSDevice8ConvertP00 to 1.
 AUTOSTART: Restoring FSDeviceLongNames to 0.
 AUTOSTART: Done.
-Sync reset
-Sync reset
 Initiating render thread 0 shutdown
 Joining render thread 0 ...
 Render thread shutdown
@@ -172,9 +170,8 @@ AutostartPrgMode=1
 reconstructed commandline options (might be incomplete):
 -default +autostart-warp -autostartprgmode 1
 
-Sound: Closing device `dx'
-Sound: Sound buffer overflow (cycle based)
 VICE thread initiating shutdown
 VICE thread is exiting
 VICE thread has been joined.
-VIC-II: VSP Bug: safe channels are: 026. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 346. Emulation of memory corruption is disabled.
+Sound: Closing device `dx'
