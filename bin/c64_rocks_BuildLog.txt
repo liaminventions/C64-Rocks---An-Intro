@@ -1,4 +1,5 @@
 Output dir: C:\c64\Source\c64 rocks\bin
+User Arguments: afo=true
 parsing
 flex pass 1
 flex pass 2

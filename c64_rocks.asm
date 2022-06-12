@@ -584,23 +584,23 @@ copy_inverted_system_font: {
     lda #$33    // make the CPU see the Character Generator ROM...
     sta $01     // ...at $D000 by storing %00110011 into location $01
     lda #$d0    // load high byte of $D000
-    sta $fc     // store it in a free location we use as vector
+    sta $21     // store it in a free location we use as vector
     ldy #$00    // init counter with 0
-    sty $fb     // store it as low byte in the $FB/$FC vector
+    sty $20     // store it as low byte in the $FB/$FC vector
 
     lda #$40    // load high byte of $4000
-    sta $f1     // store it in a free location we use as vector
+    sta $23     // store it in a free location we use as vector
     ldy #$00    // init counter with 0
-    sty $f0     // store it as low byte in the $FB/$FC vector
+    sty $22     // store it as low byte in the $FB/$FC vector
 
 loop:
-    lda ($fb),y // read byte from vector stored in $fb/$fc
+    lda ($20),y // read byte from vector stored in $fb/$fc
     eor #255
-    sta ($f0),y // write to the RAM under ROM at same position
+    sta ($22),y // write to the RAM under ROM at same position
     iny         // do this 255 times...
     bne loop    // ..for low byte $00 to $FF
-    inc $fc     // when we passed $FF increase high byte...
-    inc $f1     // when we passed $FF increase high byte...
+    inc $21     // when we passed $FF increase high byte...
+    inc $23     // when we passed $FF increase high byte...
     dex         // ... and decrease X by one before restart
     bne loop    // We repeat this until X becomes Zero
     lda #$37    // switch in I/O mapped registers again...
@@ -625,8 +625,8 @@ scroller_update_char_row: {
     bne noscroll
     ldx #$00
 moveline:
-    lda (VIC_BASE+$0400)+24*40+1, x
-    sta (VIC_BASE+$0400)+24*40, x
+    lda $4400+24*40+1, x
+    sta $4400+24*40, x
     inx
     cpx #39
     bne moveline
@@ -641,7 +641,7 @@ moveline:
 
     ldy #0
     lda ($20),y
-    sta (VIC_BASE+$0400)+24*40 + 39
+    sta $4400+24*40 + 39
 
     add16_imm8(charpos, 1)
 
