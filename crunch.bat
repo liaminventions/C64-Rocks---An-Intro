@@ -1,0 +1,1 @@
+pucrunch.exe bin\c64_rocks.prg bin\c64rocks.prg
