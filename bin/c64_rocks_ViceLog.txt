@@ -13,7 +13,7 @@ Empathic Qubit, Roberto Muscedere, June Tate-Gans, Pablo Roldan.
 This is free software with ABSOLUTELY NO WARRANTY.
 See the "About VICE" command for more info.
  
-random seed was: 0x62a8ef2f
+random seed was: 0x62ac94ba
 command line was: x64sc -logfile C:\c64\Source\c64 rocks/bin/c64_rocks_ViceLog.txt -moncommands C:\c64\Source\c64 rocks/bin/c64_rocks.vs C:\c64\Source\c64 rocks/bin/c64_rocks.prg
 Loading system file `C:\C64\Tools\Vice\bin\..\C64\kernal'.
 Loading system file `C:\C64\Tools\Vice\bin\..\C64\basic'.
@@ -54,7 +54,7 @@ Error - CRT header invalid.
 CART: 'C:\c64\Source\c64 rocks/bin/c64_rocks.prg' is not a valid CRT file.
 AUTOSTART: Loading PRG file `C:\c64\Source\c64 rocks/bin/c64_rocks.prg' with direct RAM injection.
 AUTOSTART: Resetting the machine to autostart '*'
-VIC-II: VSP Bug: safe channels are: 57. Emulation of memory corruption is disabled.
+VIC-II: VSP Bug: safe channels are: 06. Emulation of memory corruption is disabled.
 AUTOSTART: `C:\c64\Source\c64 rocks/bin/c64_rocks.prg' recognized as program/p00 file.
 Main CPU: starting at ($FFFC).
 Main CPU: RESET.
@@ -170,8 +170,9 @@ AutostartPrgMode=1
 reconstructed commandline options (might be incomplete):
 -default +autostart-warp -autostartprgmode 1
 
+Sound: Closing device `dx'
+Sound: Sound buffer overflow (cycle based)
 VICE thread initiating shutdown
 VICE thread is exiting
 VICE thread has been joined.
-VIC-II: VSP Bug: safe channels are: 047. Emulation of memory corruption is disabled.
-Sound: Closing device `dx'
+VIC-II: VSP Bug: safe channels are: 12346. Emulation of memory corruption is disabled.

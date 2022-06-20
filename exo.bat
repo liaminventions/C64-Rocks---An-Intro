@@ -1,0 +1,1 @@
+exomizer.exe sfx basic,0x0801 -t64 bin\c64_rocks.prg -o bin\c64rocks.prg
