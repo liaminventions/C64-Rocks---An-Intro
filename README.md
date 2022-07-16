@@ -1,4 +1,4 @@
-# C64-Rocks---An-Intro
+# C64 Rocks - An Intro
 My first program for the Commodore 64! This is just a simple Intro...
 
 The release on CSDb: https://csdb.dk/release/?id=218650
