@@ -402,12 +402,12 @@ clearlastrow:
         cpx #40
         bne clearlastrow
 
-            // IRQ setup
+        // IRQ setup
         sei
         lda #$35        // Bank out kernal and basic
         sta $01
         // Setup raster IRQ
-        SetupIRQ(irq0, 16, false)
+        SetupIRQ(irq0, $10, false)
 
         lda #0
         sta framecount
@@ -418,6 +418,13 @@ clearlastrow:
 infloop:
         jmp infloop
 }
+
+// irq0 - $10 - switch to bitmap mode, 40 columms, update the scoller text position
+// irq1 - $67 - count frame, switch to text mode, display & update starfield, draw sprites, update plasma, play music
+// irq2 - $d2 - switch to bitmap mode.
+// irq3 - $ee - switch to text mode, 38 columms
+// irq4 - $f1 - stablize irq5
+// irq5 - $f2 - change the bg color with very precice timing to make rainbow text.
 
 irq0: {
         irq_start(end)
@@ -491,7 +498,7 @@ irq2: {
 
         DebugRaster(0)
 
-        irq_end(irq3,50+200-12)
+        irq_end(irq3, $ee)
 end:    rti 
 }
 
@@ -513,7 +520,7 @@ irq3: {
 
         DebugRaster(0)
 
-        irq_end(irq4,50+200-9)
+        irq_end(irq4, $f1)
 end:    rti 
 }
 
@@ -521,7 +528,6 @@ irq4: {
 
         double_irq(end, irq5)
 irq5:
-
 
     // Wait exactly 9 * (2+3) cycles so that the raster line is in the border
     ldx #$09
